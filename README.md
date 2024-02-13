@@ -1,1 +1,1 @@
-# azure_function_app
+# azure-function-app
