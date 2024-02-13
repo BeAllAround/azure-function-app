@@ -1,6 +1,6 @@
 # azure-function-app - zip and deploy HTTP azure functions using terraform
 
-Terraform configuration for deploying HTTP Azure Function Apps
+Terraform configuration for zipping and deploying HTTP Azure Function Apps
 
 | ![Voxgig](https://www.voxgig.com/res/img/vgt01r.png) | This open source module is sponsored and supported by [Voxgig](https://www.voxgig.com). |
 | ---------------------------------------------------- | --------------------------------------------------------------------------------------- |
