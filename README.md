@@ -52,12 +52,28 @@ variable "azure_functions" {
 module "function_function" {
   source     = "./tf/modules/function"
   # must depend on a resource as to deploy in order
-  depends_on = [azurerm_windows_function_app.function_app]
+  depends_on = [ azurerm_windows_function_app.function_app ]
 
   for_each = var.azure_functions
 
   name         = each.key
   json_content = each.value.content
+}
+
+# azure function host file config
+resource "local_file" "hostfile" {
+  depends_on = [ module.function_function ]
+  content = jsonencode(
+    {
+      "version" = "2.0",
+      "extensionBundle" = {
+        "id"      = "Microsoft.Azure.Functions.ExtensionBundle",
+        "version" = "[4.*, 5.0.0)"
+      }
+    }
+  )
+  filename = "host.json"
+
 }
 
 locals {
