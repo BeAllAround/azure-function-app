@@ -35,3 +35,6 @@ override.tf.json
 terraform.rc
 
 *.zip
+
+# azure function host config json
+host.json
