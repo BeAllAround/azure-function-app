@@ -75,7 +75,7 @@ locals {
 ## Steps to deploy
 
 1. https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure
-2. Preferably, set up variables in `variables.tf` file (you might need to create it).
+2. Preferably, set up variables in `variables.tf` file
 3. Initialize Terraform: `terraform init -upgrade`
 4. Plan the deployment: `terraform plan`
 5. Apply the changes: `terraform apply`
